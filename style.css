@@ -1,0 +1,178 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a, button, input, textarea, * {
+    outline: none;
+}
+
+header {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    padding: 0.5rem;
+}
+
+body {
+    /* background: #313131; */
+    /* color: gray; */
+    width: 100%;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+header h1 {
+    font-size: 5rem;
+}
+
+/* .navigation-combined {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+} */
+
+nav {
+    height: fit-content;
+    width: 300px;
+    background: linear-gradient(gray, #eee);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 2rem;
+    left: -300px;
+    transition: 0.2s all ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#navigation, #theme {
+    color: gray;
+    background: #121212;
+    border: hidden;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.navigation-button-section, #theme {
+    position: absolute;
+    z-index: 1;
+}
+
+.navigation-button-section {
+    top: 1rem;
+    left: 1rem;
+}
+
+#theme {
+    top: 1rem;
+    left: 2.8rem;
+}
+
+nav .contact {
+    text-align: center;
+}
+
+nav .contact {
+    transition: 0.2s all ease-in-out;
+}
+
+nav .contact button a:hover {
+    font-weight: 400;
+    color: darkcyan;
+}
+
+.image-section, a h1, .contact {
+    margin-bottom: 0.25rem;
+}
+
+nav a h1 {
+    transition: 0.2s all ease-in-out;
+}
+
+nav a h1:hover {
+    color: darkslategray;
+}
+
+nav * {
+    color: black;
+}
+/* 
+nav .image-section {
+    height: 100px;
+    width: 100px;
+} */
+
+nav .image-section #image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #171717;
+    cursor: pointer;
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family: cursive; */
+}
+
+.contact button {
+    color: black;
+    background: #eee;
+    border: hidden;
+    width: 270px;
+    border-radius: 0.2rem;
+    padding: 0.15rem;
+    margin-bottom: 0.5rem;
+}
+
+/* @media only screen and (min-width:1140) {
+    body {
+        max-width: 50%;
+    }
+} */
+
+@media only screen and (max-width:375px) {
+    nav {
+        width: 280px;
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    nav {
+        width: 500px;
+        height: 100vh;
+    }
+
+    nav .contact button{
+        display: block;
+    }
+
+    .navigation-button-section {
+        display: none;
+    }
+}
