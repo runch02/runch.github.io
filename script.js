@@ -57,7 +57,7 @@ class UI {
 
     static initialNumber = 0
 
-    static showKalpbruh() {
+    static showRunch() {
         let runchName = "RUNCH"
         if (UI.initialNumber === runchName.length) {
             UI.initialNumber = 0
@@ -79,5 +79,5 @@ document.getElementById("navigation").addEventListener("click", element => UI.na
 document.getElementById("theme").addEventListener("click", element => UI.themeHandler(element))
 
 let interval = setInterval(() => {
-    UI.showKalpbruh()
+    UI.showRunch()
 }, 500)
