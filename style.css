@@ -23,6 +23,13 @@ header {
     padding: 0.5rem;
 }
 
+header img {
+    height: 15rem;
+    width: 12rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 0.25rem;
+}
+
 body {
     /* background: #313131; */
     /* color: gray; */
@@ -30,19 +37,11 @@ body {
 }
 
 header {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-header a {
-    text-decoration: none;
-    color: darkslategray;
-}
-
-header h1 {
-    font-size: 5rem;
+    flex-direction: column;
 }
 
 /* .navigation-combined {
@@ -93,12 +92,20 @@ nav {
     left: 2.8rem;
 }
 
+nav p{
+    margin-bottom: 0.25rem;
+}
+
 nav .contact {
     text-align: center;
 }
 
 nav .contact {
     transition: 0.2s all ease-in-out;
+}
+
+nav .contact button {
+    padding: 0.5rem;
 }
 
 nav .contact button a:hover {
@@ -150,6 +157,38 @@ nav .image-section #image {
     margin-bottom: 0.5rem;
 }
 
+footer {
+    /* margin-right: 1rem; */
+    text-align: center;
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+footer a h1 {
+    bottom: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+footer a h1 {
+    margin: 1rem;
+    width: 100%;
+    position: fixed;
+    /* top: 1rem; */
+    /* right: 23rem; */
+    /* right: 500px;
+    left: 500px; */
+}
+
+footer h1 {
+    font-size: 5rem;
+}
+
 /* @media only screen and (min-width:1140) {
     body {
         max-width: 50%;
@@ -158,7 +197,8 @@ nav .image-section #image {
 
 @media only screen and (max-width:375px) {
     nav {
-        width: 280px;
+        width: 270px;
+        margin: 0;
     }
 }
 
@@ -176,3 +216,10 @@ nav .image-section #image {
         display: none;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    footer a h1 {
+        font-size: 4rem;
+    }
+}
+
