@@ -45,7 +45,7 @@ class UI {
     }
 
     static setStyleToDOM() {
-        if (localStorage.getItem('theme') === null) {
+        if (localStorage.getItem("theme") === null) {
             return;
         } else {
             let fetchStyleFromLocalStorage = JSON.parse(localStorage.getItem("theme"))
@@ -54,6 +54,20 @@ class UI {
             document.body.style.color = fetchStyleFromLocalStorage.color
         }
     }
+
+    static initialNumber = 0
+
+    static showKalpbruh() {
+        let runchName = "RUNCH"
+        if (UI.initialNumber === runchName.length) {
+            UI.initialNumber = 0
+            document.querySelector("footer a h1").innerHTML = ""
+        } else {
+            document.querySelector("footer a h1").innerHTML += runchName[UI.initialNumber]
+            UI.initialNumber += 1
+        }
+    } 
+
 }
 
 let firstObjectOfClassUI = new UI()
@@ -63,3 +77,7 @@ document.getElementById("navigation").addEventListener("click", element => UI.na
 
 // function to handle theme status
 document.getElementById("theme").addEventListener("click", element => UI.themeHandler(element))
+
+let interval = setInterval(() => {
+    UI.showKalpbruh()
+}, 500)
